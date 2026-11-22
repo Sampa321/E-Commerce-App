@@ -186,7 +186,7 @@ export default function PlaceOrder() {
               window.location.href = response.data.session_url;
               return;
             }else if(method === "razorpay"){
-              initPay(response.data.orderItems); 
+              initPay(response.data.order); 
             }
 
         }else {
