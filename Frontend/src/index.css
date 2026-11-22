@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Changa+One:ital@0;1&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@import "tailwindcss";
+
+* {
+    font-family: "Outfit", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Remove default active link styling */
+a.active {
+    color: inherit;
+}
+
+@media (max-width: 640px) {
+    a:active {
+        background-color: transparent;
+        color: inherit;
+    }
+}
