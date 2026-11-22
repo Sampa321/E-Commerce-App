@@ -24,10 +24,15 @@ import { assets } from '../assets/assets.js';
         setOrders(Array.isArray(response.data.orders) ? response.data.orders : []);
       }else{
         setOrders([]);
+        console.log("Status:", error.response?.status);
+        console.log("Backend message:", error.response?.data);
         toast.error(response.data.message);
       }
       
     } catch (error) {
+       console.log("401 ERROR:", error.response?.data);
+      console.log("STATUS:", error.response?.status);
+      console.log("TOKEN EXISTS:", Boolean(token));
       toast.error(error.message)
     }
   }
