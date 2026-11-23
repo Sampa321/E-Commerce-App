@@ -68,7 +68,7 @@ export default function PlaceOrder() {
       description : 'Order Payment',
       order_id : order.id,
       receipt : order.receipt,
-      handler : async (response) =>{
+      handler : async (PaymentResponse) =>{
         try {
           setLoading(true);
           const verifyResponse = await axios.post(backendUrl + "/api/order/verifyRazorpay",{
